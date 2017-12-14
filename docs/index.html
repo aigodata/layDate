@@ -112,13 +112,14 @@
   &lt;script src=&quot;ag-ui.min.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
+
 </code>
 </pre>
           </div><!--代码块 end -->
         </div>
       </div>
-      <!--日期与时间组件-->
-      <div id="layout" class="rx-each-item">
+      <!--基础用法-->
+      <div class="rx-each-item">
         <!--标题-->
         <div class="rx-tit">
           <h2>基础用法</h2>
@@ -134,10 +135,12 @@
             <div class="example-wrap">
               <div class="code-example-wrap">
                 <div class="date-time-wrap rx-clearfix">
-                  <div class="rx-fl rx-g">
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
                     <label>中文版</label>
                     <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="chinese-version">
                   </div>
+                  <!--每个时间选择器-->
                   <div class="rx-fl">
                     <label>国际版</label>
                     <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="internation-version">
@@ -145,15 +148,14 @@
                 </div>
               </div>
               <!--代码块-->
-              <div class="rx-relative code-block" layout-code-1>
+              <div class="rx-relative code-block" date-time-1>
                 <!--复制icon-->
                 <a href="javascript:void(0)" class="copy"
                    data-clipboard-demo data-clipboard-action="copy"
-                   data-clipboard-target=".layout-code-1">
+                   data-clipboard-target=".date-time-1">
                   <i class="icon iconfont icon-fuzhi"></i>
                 </a>
-                <pre class="rx-border-top">
-                  <code class="rx-clear-radius layout-code-1 css html">
+                <pre class="rx-border-top"><code class="rx-clear-radius date-time-1 css html">
 //中文版
 laydate.render({
   elem: '#chinese-version'
@@ -164,11 +166,81 @@ laydate.render({
   elem: '#internation-version'
   ,lang: 'en'
 });
-                  </code>
-                </pre>
+                  </code></pre>
               </div>
               <!--按钮-->
-              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="layout-code-1">
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-1">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--其他选择器-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>其他选择器</h2>
+          <p>我是描述文字</p>
+        </div>
+        <!--每个条目 -- 其他选择器 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--说明-->
+            <p class="explain">layDate 日期与时间组件 layDate 日期与时间组件</p>
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <div class="date-time-wrap rx-clearfix">
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>年选择器</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy" id="year-selector">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>年月选择器</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM" id="year-month-selector">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>时间选择器</label>
+                    <input type="text" class="ag-date-time" placeholder="HH:mm:ss" id="time-selector">
+                  </div>
+                </div>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" date-time-2>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".date-time-2">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius date-time-2 css html">
+//年选择器
+  laydate.render({
+    elem: '#year-selector'
+    ,type: 'year'
+  });
+
+  //年月选择器
+  laydate.render({
+    elem: '#year-month-selector'
+    ,type: 'month'
+  });
+
+  //时间选择器
+  laydate.render({
+    elem: '#time-selector'
+    ,type: 'time'
+  });
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-2">
                 <span class="show">显示代码</span>
                 <span class="hide">隐藏代码</span>
               </a>
@@ -194,6 +266,7 @@ laydate.render({
 <script type="text/javascript" src="assets/scripts/ag-click.js"></script>
 
 <script type="text/javascript">
+
   //中文版
   laydate.render({
     elem: '#chinese-version'
@@ -203,6 +276,24 @@ laydate.render({
   laydate.render({
     elem: '#internation-version'
     ,lang: 'en'
+  });
+
+  //年选择器
+  laydate.render({
+    elem: '#year-selector'
+    ,type: 'year'
+  });
+
+  //年月选择器
+  laydate.render({
+    elem: '#year-month-selector'
+    ,type: 'month'
+  });
+
+  //时间选择器
+  laydate.render({
+    elem: '#time-selector'
+    ,type: 'time'
   });
 
 </script>

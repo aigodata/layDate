@@ -197,7 +197,7 @@ html #layuicss-laydate {
 
 .layui-laydate-footer {
   position: relative;
-  width: 226px;
+  width: 232px;
   height: 43px;
   line-height: 26px;
   padding: 10px 20px;
@@ -288,12 +288,13 @@ html #layuicss-laydate {
 
 .laydate-time-list p {
   position: relative;
-  top: -4px;
-  line-height: 29px
+  top: 0;
+  line-height: 26px;
+  font-size: 11px;
 }
 
 .laydate-time-list ol {
-  height: 181px;
+  height: 160px;
   overflow: hidden
 }
 
@@ -307,6 +308,14 @@ html #layuicss-laydate {
   line-height: 30px;
   text-align: left;
   cursor: pointer
+}
+
+.laydate-time-list ol li:hover{
+  background: #eee;
+}
+
+.laydate-time-list ol li.layui-this{
+  background: #30a8ff;
 }
 
 .layui-laydate-hint {

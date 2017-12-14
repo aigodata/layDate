@@ -19,6 +19,7 @@
 }
 
 .date-time-wrap>div label{
+  text-align: right;
   padding-right: 10px;
 }
 
