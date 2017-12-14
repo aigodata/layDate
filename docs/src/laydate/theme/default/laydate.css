@@ -443,7 +443,6 @@ html #layuicss-laydate {
 }
 
 .layui-laydate .layui-this {
-  /*background-color: #4e95ec !important;*/
   font-size: 11px;
   color: #fff !important;
 }
@@ -458,6 +457,10 @@ html #layuicss-laydate {
   background: #30a8ff;
   border-radius: 50%;
   z-index: -1;
+}
+
+.layui-laydate .layui-this:hover:after{
+  background: #30a8ff !important;
 }
 
 .layui-laydate .laydate-disabled, .layui-laydate .laydate-disabled:hover {
