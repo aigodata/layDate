@@ -11,19 +11,19 @@
   <link rel="stylesheet" type="text/css" href="assets/styles/primer.css">
   <link rel="stylesheet" type="text/css" href="assets/styles/github.css">
   <link rel="stylesheet" type="text/css" href="assets/styles/custom.css">
-  <!-- 样式 -->
-  <link rel="stylesheet" type="text/css" href="./ag-ui-1.0.0.css">
+  <!-- layDate页面样式 -->
+  <link rel="stylesheet" type="text/css" href="assets/styles/lay-date.css">
 </head>
-<body>
+<body class="ag-lay-date-page">
 <!-- 头部 -->
 <div class="aigo-header">
   <!--logo-->
   <div class="aigo-logo">
-    <a href="http://www.aigodata.com">
+    <a href="//www.aigodata.com">
       <img src="assets/images/aigodata-logo-white.svg">
     </a>
     <span class="symbol">&</span>
-    <a href="./index.html">
+    <a href="./">
       <span class="name">layDate</span>
     </a>
   </div>
@@ -36,7 +36,7 @@
       <!--<a target="_blank" href="simple.html">示例</a>-->
     </li>
     <li class="aigo-menu-item">
-      <a href="http://www.layui.com/laydate/changelog.html" target="_blank">更新日志</a>
+      <a href="changelog.html">更新日志</a>
     </li>
     <li class="aigo-menu-item">
       <!--<a href="commonProblem.html">常见问题</a>-->
@@ -46,7 +46,7 @@
     </li>
   </ul>
   <!--github-->
-  <a href="//github.com/sentsin/laydate/" target="_blank" class="aigo-github">
+  <a href="//github.com/aigodata/ag-ui" target="_blank" class="aigo-github">
     <img src="assets/images/github.svg"/>
   </a>
 </div>
@@ -54,15 +54,7 @@
 <div class="rx-wrap">
   <!--内容部分-->
   <div class="rx-visual">
-    <!--侧边栏-->
-    <div class="rx-sidebar">
-      <ul class="web-font">
-        <li>
-          <a href="#start">Start 快速上手</a>
-        </li>
-      </ul>
-    </div>
-    <!--右侧-->
+    <!--layDate-->
     <div class="rx-page-component web-font">
       <!--快速上手-->
       <div id="start" class="rx-each-item">
@@ -90,13 +82,13 @@
         <!--每段描述-->
         <div>
           <h3>免费开源</h3>
-          <p><a target="_blank" href="//github.com/sentsin/laydate/">https://github.com/sentsin/laydate/</a></p>
+          <p><a target="_blank" href="//github.com/aigodata/ag-ui">https://github.com/aigodata/ag-ui</a></p>
         </div>
         <!--每段描述-->
         <div>
           <h3>文件大小</h3>
-          <p>ag-ui.min.css (gzip 5.1kb)</p>
-          <p>ag-ui.min.js (gzip 2.1kb)</p>
+          <p>ag-ui.min.css (gzip 24kb)</p>
+          <p>ag-ui.min.js (gzip 24kb)</p>
         </div>
         <!--每段描述-->
         <div>
@@ -125,6 +117,65 @@
           </div><!--代码块 end -->
         </div>
       </div>
+      <!--日期与时间组件-->
+      <div id="layout" class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>基础用法</h2>
+          <p>我是描述文字</p>
+        </div>
+        <!--每个条目 -- 基础用法 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--说明-->
+            <p class="explain">layDate 日期与时间组件 layDate 日期与时间组件</p>
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <div class="date-time-wrap rx-clearfix">
+                  <div class="rx-fl rx-g">
+                    <label>中文版</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="chinese-version">
+                  </div>
+                  <div class="rx-fl">
+                    <label>国际版</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="internation-version">
+                  </div>
+                </div>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" layout-code-1>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".layout-code-1">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top">
+                  <code class="rx-clear-radius layout-code-1 css html">
+//中文版
+laydate.render({
+  elem: '#chinese-version'
+});
+
+//国际版
+laydate.render({
+  elem: '#internation-version'
+  ,lang: 'en'
+});
+                  </code>
+                </pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="layout-code-1">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -134,10 +185,26 @@
 <script type="text/javascript" src="assets/scripts/clipboard.min.js"></script>
 <!--代码高亮-->
 <script type="text/javascript" src="assets/scripts/highlight.pack.min.js"></script>
+<!--日期与时间组件-->
+<script type="text/javascript" src="src/laydate/laydate.js"></script>
 <!-- 自定义脚本 -->
 <script type="text/javascript" src="assets/scripts/demos.js"></script>
 <script type="text/javascript" src="assets/scripts/snippets.js"></script>
 <script type="text/javascript" src="assets/scripts/tooltips.js"></script>
 <script type="text/javascript" src="assets/scripts/ag-click.js"></script>
+
+<script type="text/javascript">
+  //中文版
+  laydate.render({
+    elem: '#chinese-version'
+  });
+
+  //国际版
+  laydate.render({
+    elem: '#internation-version'
+    ,lang: 'en'
+  });
+
+</script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+/*
+ *layDate页面样式
+ */
+
+.ag-lay-date-page{
+  min-width: 1140px;
+}
+
+.ag-lay-date-page .rx-page-component{
+  width: 1120px;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+}
+
+/*input*/
+.date-time-wrap>div{
+  width: 33.333%;
+  text-align: center;
+}
+
+.date-time-wrap>div label{
+  padding-right: 10px;
+}
+
+.date-time-wrap .ag-date-time{
+  width: 224px;
+  height: 36px;
+  border: 1px solid #cecece;
+  border-radius: 3px;
+  padding-left: 8px;
+}
