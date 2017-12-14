@@ -225,7 +225,7 @@ laydate.render({
                   <i class="icon iconfont icon-fuzhi"></i>
                 </a>
                 <pre class="rx-border-top"><code class="rx-clear-radius date-time-2 css html">
-//年选择器
+  //年选择器
   laydate.render({
     elem: '#year-selector'
     ,type: 'year'
@@ -278,62 +278,77 @@ laydate.render({
                 <div class="date-time-wrap rx-clearfix">
                   <!--每个时间选择器-->
                   <div class="rx-fl">
+                    <label>日期范围</label>
+                    <input type="text" class="ag-date-time" placeholder="-" id="date-scope">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>年范围</label>
+                    <input type="text" class="ag-date-time" placeholder="-" id="year-scope">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>年月范围</label>
+                    <input type="text" class="ag-date-time" placeholder="-" id="year-month-scope">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>时间范围</label>
+                    <input type="text" class="ag-date-time" placeholder="-" id="time-scope">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
                     <label>日期时间范围</label>
-                    <input type="text" class="ag-date-time" placeholder="yyyy" id="year-selector">
-                  </div>
-                  <!--每个时间选择器-->
-                  <div class="rx-fl">
-                    <label>年月选择器</label>
-                    <input type="text" class="ag-date-time" placeholder="yyyy-MM" id="year-month-selector">
-                  </div>
-                  <!--每个时间选择器-->
-                  <div class="rx-fl">
-                    <label>时间选择器</label>
-                    <input type="text" class="ag-date-time" placeholder="HH:mm:ss" id="time-selector">
-                  </div>
-                  <!--每个时间选择器-->
-                  <div class="rx-fl">
-                    <label>日期时间选择器</label>
-                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd HH:mm:ss" id="date-time-selector">
+                    <input type="text" class="ag-date-time" placeholder="-" id="date-time-scope">
                   </div>
                 </div>
               </div>
               <!--代码块-->
-              <div class="rx-relative code-block" date-time-2>
+              <div class="rx-relative code-block" date-time-3>
                 <!--复制icon-->
                 <a href="javascript:void(0)" class="copy"
                    data-clipboard-demo data-clipboard-action="copy"
-                   data-clipboard-target=".date-time-2">
+                   data-clipboard-target=".date-time-3">
                   <i class="icon iconfont icon-fuzhi"></i>
                 </a>
-                <pre class="rx-border-top"><code class="rx-clear-radius date-time-2 css html">
-//年选择器
+                <pre class="rx-border-top"><code class="rx-clear-radius date-time-3 css html">
+  //日期范围
   laydate.render({
-    elem: '#year-selector'
+    elem: '#date-scope'
+    ,range: true
+  });
+
+  //年范围
+  laydate.render({
+    elem: '#year-scope'
     ,type: 'year'
+    ,range: true
   });
 
-  //年月选择器
+  //年月范围
   laydate.render({
-    elem: '#year-month-selector'
+    elem: '#year-month-scope'
     ,type: 'month'
+    ,range: true
   });
 
-  //时间选择器
+  //时间范围
   laydate.render({
-    elem: '#time-selector'
+    elem: '#time-scope'
     ,type: 'time'
+    ,range: true
   });
 
-  //日期时间选择器
+  //日期时间范围
   laydate.render({
-    elem: '#date-time-selector'
+    elem: '#date-time-scope'
     ,type: 'datetime'
+    ,range: true
   });
                   </code></pre>
               </div>
               <!--按钮-->
-              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-2">
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-3">
                 <span class="show">显示代码</span>
                 <span class="hide">隐藏代码</span>
               </a>
@@ -360,6 +375,8 @@ laydate.render({
 
 <script type="text/javascript">
 
+  //基础用法
+
   //中文版
   laydate.render({
     elem: '#chinese-version'
@@ -370,6 +387,8 @@ laydate.render({
     elem: '#internation-version'
     ,lang: 'en'
   });
+
+  //其他选择器
 
   //年选择器
   laydate.render({
@@ -393,6 +412,42 @@ laydate.render({
   laydate.render({
     elem: '#date-time-selector'
     ,type: 'datetime'
+  });
+
+  //范围选择
+
+  //日期范围
+  laydate.render({
+    elem: '#date-scope'
+    ,range: true
+  });
+
+  //年范围
+  laydate.render({
+    elem: '#year-scope'
+    ,type: 'year'
+    ,range: true
+  });
+
+  //年月范围
+  laydate.render({
+    elem: '#year-month-scope'
+    ,type: 'month'
+    ,range: true
+  });
+
+  //时间范围
+  laydate.render({
+    elem: '#time-scope'
+    ,type: 'time'
+    ,range: true
+  });
+
+  //日期时间范围
+  laydate.render({
+    elem: '#date-time-scope'
+    ,type: 'datetime'
+    ,range: true
   });
 
 </script>
