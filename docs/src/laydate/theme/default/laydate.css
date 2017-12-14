@@ -105,7 +105,7 @@ html #layuicss-laydate {
   cursor: pointer
 }
 
-.laydate-set-ym span{
+.laydate-set-ym span {
   color: #000;
 }
 
@@ -234,7 +234,7 @@ html #layuicss-laydate {
   border-radius: 2px;
 }
 
-.laydate-footer-btns span:not(:last-child){
+.laydate-footer-btns span:not(:last-child) {
   margin-right: 5px;
 }
 
@@ -263,12 +263,12 @@ html #layuicss-laydate {
   cursor: pointer;
 }
 
-.layui-laydate-list > li:hover{
+.layui-laydate-list > li:hover {
   background: #eee;
   border-radius: 16px;
 }
 
-.layui-laydate-list > li.layui-this{
+.layui-laydate-list > li.layui-this {
   background: #30a8ff;
   border-radius: 16px;
 }
@@ -302,18 +302,24 @@ html #layuicss-laydate {
 }
 
 .laydate-time-list ol li {
-  width: 130%;
-  padding-left: 33px;
-  line-height: 30px;
-  text-align: left;
-  cursor: pointer
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
-.laydate-time-list ol li:hover{
+.laydate-time-list ol li:first-child {
+  margin-top: 2px;
+}
+
+.laydate-time-list ol li:hover {
   background: #eee;
 }
 
-.laydate-time-list ol li.layui-this{
+.laydate-time-list ol li.layui-this {
   background: #30a8ff;
 }
 
@@ -385,7 +391,7 @@ html #layuicss-laydate {
   color: #585858;
 }
 
-.layui-laydate-content td:hover:after{
+.layui-laydate-content td:hover:after {
   content: '';
   width: 26px;
   height: 26px;
@@ -432,7 +438,7 @@ html #layuicss-laydate {
   display: none
 }
 
-.layui-laydate-footer span[lay-type=datetime],.layui-laydate-footer span[lay-type=date]{
+.layui-laydate-footer span[lay-type=datetime], .layui-laydate-footer span[lay-type=date] {
   position: absolute;
   top: 9px;
   left: 0;
@@ -447,7 +453,7 @@ html #layuicss-laydate {
   color: #fff !important;
 }
 
-.layui-laydate .layui-this:after{
+.layui-laydate .layui-this:after {
   content: '';
   width: 26px;
   height: 26px;
@@ -459,7 +465,7 @@ html #layuicss-laydate {
   z-index: -1;
 }
 
-.layui-laydate .layui-this:hover:after{
+.layui-laydate .layui-this:hover:after {
   background: #30a8ff !important;
 }
 
