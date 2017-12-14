@@ -2,28 +2,38 @@
  *layDate页面样式
  */
 
-.ag-lay-date-page{
+.ag-lay-date-page {
   min-width: 1140px;
 }
 
-.ag-lay-date-page .rx-page-component{
+.ag-lay-date-page .rx-page-component {
   width: 1120px;
   margin: 0 auto;
   padding: 0 0 50px 0;
 }
 
 /*input*/
-.date-time-wrap>div{
+.date-time-wrap {
+  margin: 10px 0;
+}
+
+.date-time-wrap > div {
   width: 33.333%;
   text-align: center;
 }
 
-.date-time-wrap>div label{
+.date-time-wrap > div:not(:nth-child(-n+3)) {
+  margin-top: 20px;
+}
+
+.date-time-wrap > div label {
+  display: inline-block;
+  min-width: 98px;
   text-align: right;
   padding-right: 10px;
 }
 
-.date-time-wrap .ag-date-time{
+.date-time-wrap .ag-date-time {
   width: 224px;
   height: 36px;
   border: 1px solid #cecece;

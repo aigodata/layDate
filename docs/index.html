@@ -209,6 +209,11 @@ laydate.render({
                     <label>时间选择器</label>
                     <input type="text" class="ag-date-time" placeholder="HH:mm:ss" id="time-selector">
                   </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>日期时间选择器</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd HH:mm:ss" id="date-time-selector">
+                  </div>
                 </div>
               </div>
               <!--代码块-->
@@ -236,6 +241,12 @@ laydate.render({
   laydate.render({
     elem: '#time-selector'
     ,type: 'time'
+  });
+
+  //日期与时间选择器
+  laydate.render({
+    elem: '#date-time-selector'
+    ,type: 'datetime'
   });
                   </code></pre>
               </div>
@@ -294,6 +305,12 @@ laydate.render({
   laydate.render({
     elem: '#time-selector'
     ,type: 'time'
+  });
+
+  //日期与时间选择器
+  laydate.render({
+    elem: '#date-time-selector'
+    ,type: 'datetime'
   });
 
 </script>

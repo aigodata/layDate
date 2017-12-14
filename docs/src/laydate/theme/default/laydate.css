@@ -200,7 +200,6 @@ html #layuicss-laydate {
   width: 232px;
   height: 43px;
   line-height: 26px;
-  padding: 10px 20px;
   border-top: 1px solid #ececec;
   margin: 0 auto;
 }
@@ -209,7 +208,7 @@ html #layuicss-laydate {
   margin-right: 15px;
   display: inline-block;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .layui-laydate-footer span:hover {
@@ -433,8 +432,14 @@ html #layuicss-laydate {
   display: none
 }
 
+.layui-laydate-footer span[lay-type=datetime],.layui-laydate-footer span[lay-type=date]{
+  position: absolute;
+  top: 9px;
+  left: 0;
+}
+
 .layui-laydate-footer span[lay-type=date] {
-  color: #4e95ec
+  color: #30a8ff;
 }
 
 .layui-laydate .layui-this {
