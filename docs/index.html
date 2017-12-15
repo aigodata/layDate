@@ -220,10 +220,10 @@ laydate.render({
       <div class="rx-each-item">
         <!--标题-->
         <div class="rx-tit">
-          <h2>其他选择器</h2>
+          <h2>范围选择</h2>
           <p>我是描述文字</p>
         </div>
-        <!--每个条目 -- 其他选择器 -->
+        <!--每个条目 -- 范围选择 -->
         <div>
           <!--示例-->
           <div class="rx-demo-layout">
@@ -306,6 +306,115 @@ laydate.render({
               </div>
               <!--按钮-->
               <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-3">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--自定义格式-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>自定义格式</h2>
+          <p>我是描述文字</p>
+        </div>
+        <!--每个条目 -- 自定义格式 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--说明-->
+            <p class="explain">layDate 日期与时间组件 layDate 日期与时间组件</p>
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <div class="date-time-wrap rx-clearfix">
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>请选择日期</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy年MM月dd日" id="date-select">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>请选择日期</label>
+                    <input type="text" class="ag-date-time" placeholder="dd/MM/yyyy" id="date-select-1">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>请选择月份</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyyMM" id="month-select">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>请选择时间</label>
+                    <input type="text" class="ag-date-time" placeholder="H点m分" id="time-select">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>请选择范围</label>
+                    <input type="text" class="ag-date-time" placeholder="~" id="scope-select">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>请选择范围</label>
+                    <input type="text" class="ag-date-time" placeholder="开始 到 结束" id="scope-select-1">
+                  </div>
+                </div>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" date-time-4>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".date-time-4">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius date-time-4 css html">
+  //选择日期
+  laydate.render({
+    elem: '#date-select'
+    ,format: 'yyyy年MM月dd日'
+  });
+
+  //选择日期 自定义格式
+  laydate.render({
+    elem: '#date-select-1'
+    ,format: 'dd/MM/yyyy'
+  });
+
+  //选择月份
+  laydate.render({
+    elem: '#month-select'
+    ,format: 'yyyyMM'
+  });
+
+  //选择时间
+  laydate.render({
+    elem: '#time-select'
+    ,type: 'time'
+    ,format: 'H点M分'
+  });
+
+  //选择范围
+  laydate.render({
+    elem: '#scope-select'
+    ,type: 'month'
+    ,range: '~'
+    ,format: 'yyyy-MM'
+  });
+
+  //选择范围 带有时间
+  laydate.render({
+    elem: '#scope-select-1'
+    ,type: 'datetime'
+    ,range: '到'
+    ,format: 'yyyy年M月d日H时m分s秒'
+  });
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-4">
                 <span class="show">显示代码</span>
                 <span class="hide">隐藏代码</span>
               </a>
@@ -405,6 +514,49 @@ laydate.render({
     elem: '#date-time-scope'
     ,type: 'datetime'
     ,range: true
+  });
+
+  //自定义格式
+
+  //选择日期
+  laydate.render({
+    elem: '#date-select'
+    ,format: 'yyyy年MM月dd日'
+  });
+
+  //选择日期 自定义格式
+  laydate.render({
+    elem: '#date-select-1'
+    ,format: 'dd/MM/yyyy'
+  });
+
+  //选择月份
+  laydate.render({
+    elem: '#month-select'
+    ,format: 'yyyyMM'
+  });
+
+  //选择时间
+  laydate.render({
+    elem: '#time-select'
+    ,type: 'time'
+    ,format: 'H点M分'
+  });
+
+  //选择范围
+  laydate.render({
+    elem: '#scope-select'
+    ,type: 'month'
+    ,range: '~'
+    ,format: 'yyyy-MM'
+  });
+
+  //选择范围 带有时间
+  laydate.render({
+    elem: '#scope-select-1'
+    ,type: 'datetime'
+    ,range: '到'
+    ,format: 'yyyy年M月d日H时m分s秒'
   });
 
 </script>
