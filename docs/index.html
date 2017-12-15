@@ -494,7 +494,444 @@ laydate.render({
           </div>
         </div>
       </div>
-    </div>
+      <!--控制可选的日期与时间-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>控制可选的日期与时间</h2>
+          <p>我是描述文字</p>
+        </div>
+        <!--每个条目 -- 控制可选的日期与时间 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--说明-->
+            <p class="explain">layDate 日期与时间组件 layDate 日期与时间组件</p>
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <div class="date-time-wrap rx-clearfix">
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>限定可选日期</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="restrict-date">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>前后若干天可选</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="some-day">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>限定可选时间</label>
+                    <input type="text" class="ag-date-time" placeholder="HH:mm:ss" id="restrict-time">
+                  </div>
+                </div>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" date-time-6>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".date-time-6">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius date-time-6 css html">
+  //限定可选日期
+  var ins22 = laydate.render({
+    elem: '#restrict-date'
+    ,min: '2016-10-14'
+    ,max: '2080-10-14'
+    ,ready: function(){
+      ins22.hint('日期可选值设定在 <br> 2016-10-14 到 2080-10-14');
+    }
+  });
+
+  //前后若干天可选，这里以7天为例
+  laydate.render({
+    elem: '#some-day'
+    ,min: -7
+    ,max: 7
+  });
+
+  //限定可选时间
+  laydate.render({
+    elem: '#restrict-time'
+    ,type: 'time'
+    ,min: '09:30:00'
+    ,max: '17:30:00'
+    ,btns: ['clear', 'confirm']
+  });
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-6">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--同时绑定多个-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>同时绑定多个</h2>
+          <p>我是描述文字</p>
+        </div>
+        <!--每个条目 -- 同时绑定多个 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--说明-->
+            <p class="explain">layDate 日期与时间组件 layDate 日期与时间组件</p>
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <div class="date-time-wrap">
+                  <!--每个时间选择器-->
+                  <div class="multiple-bindings-wrap">
+                    <input type="text" class="ag-date-time multiple-bindings" placeholder="yyyy-MM-dd">
+                    <input type="text" class="ag-date-time multiple-bindings" placeholder="yyyy-MM-dd">
+                    <input type="text" class="ag-date-time multiple-bindings" placeholder="yyyy-MM-dd">
+                  </div>
+                </div>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" date-time-7>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".date-time-7">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius date-time-7 css html">
+  //同时绑定多个
+  lay('.multiple-bindings').each(function(){
+    laydate.render({
+      elem: this
+      ,trigger: 'click'
+    });
+  });
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-7">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--其它功能示例-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>其它功能示例</h2>
+          <p>我是描述文字</p>
+        </div>
+        <!--每个条目 -- 其它功能示例 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--说明-->
+            <p class="explain">layDate 日期与时间组件 layDate 日期与时间组件</p>
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <div class="date-time-wrap rx-clearfix">
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>初始赋值</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="initial-value">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>选中后的回调</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="on-call-back">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>日期切换的回调</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="date-call-back">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>不出现底部栏</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="not-bottom">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>只出现确定按钮</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="only-affirm">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>自定义事件</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="custom-event">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label id="click-trigger-1">点我触发</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="click-trigger">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label id="dblclick-trigger-1">双击我触发</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="dblclick-trigger">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>日期只读</label>
+                    <input type="text" readonly class="ag-date-time" placeholder="yyyy-MM-dd" id="date-readonly">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>非input元素</label>
+                    <span class="not-input" id="not-input"></span>
+                  </div>
+                </div>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" date-time-8>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".date-time-8">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius date-time-8 css html">
+  //初始赋值
+  laydate.render({
+    elem: '#initial-value'
+    ,value: '1989-10-14'
+  });
+
+  //选中后的回调
+  laydate.render({
+    elem: '#on-call-back'
+    ,done: function(value, date){
+      alert('你选择的日期是：' + value + '\n获得的对象是' + JSON.stringify(date));
+    }
+  });
+
+  //日期切换的回调
+  laydate.render({
+    elem: '#date-call-back'
+    ,change: function(value, date){
+      alert('你选择的日期是：' + value + '\n\n获得的对象是' + JSON.stringify(date));
+    }
+  });
+
+  //不出现底部栏
+  laydate.render({
+    elem: '#not-bottom'
+    ,showBottom: false
+  });
+
+  //只出现确定按钮
+  laydate.render({
+    elem: '#only-affirm'
+    ,btns: ['confirm']
+  });
+
+  //自定义事件
+  laydate.render({
+    elem: '#custom-event'
+    ,trigger: 'mousedown'
+  });
+
+  //点我触发
+  laydate.render({
+    elem: '#click-trigger'
+    ,eventElem: '#click-trigger-1'
+    ,trigger: 'click'
+  });
+
+  //双击我触发
+  lay('#dblclick-trigger-1').on('dblclick', function(){
+    laydate.render({
+      elem: '#dblclick-trigger'
+      ,show: true
+      ,closeStop: '#dblclick-trigger-1'
+    });
+  });
+
+  //日期只读
+  laydate.render({
+    elem: '#date-readonly'
+    ,trigger: 'click'
+  });
+
+  //非input元素
+  laydate.render({
+    elem: '#not-input'
+  });
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-8">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--其它主题-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>其它主题</h2>
+          <p>我是描述文字</p>
+        </div>
+        <!--每个条目 -- 其它主题 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--说明-->
+            <p class="explain">layDate 日期与时间组件 layDate 日期与时间组件</p>
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <div class="date-time-wrap rx-clearfix">
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>蓝色主题</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="blackish-blue">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>自定义颜色主题</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="defined-blackish">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>格子主题</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="defined-grid">
+                  </div>
+                </div>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" date-time-9>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".date-time-9">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius date-time-9 css html">
+  //蓝色主题
+  laydate.render({
+    elem: '#blackish-blue'
+    ,theme: 'molv'
+  });
+
+  //自定义颜色
+  laydate.render({
+    elem: '#defined-blackish'
+    ,theme: '#393D49'
+  });
+
+  //格子主题
+  laydate.render({
+    elem: '#defined-grid'
+    ,theme: 'grid'
+  });
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-9">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--直接嵌套显示-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>直接嵌套显示</h2>
+          <p>我是描述文字</p>
+        </div>
+        <!--每个条目 -- 直接嵌套显示 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--说明-->
+            <p class="explain">layDate 日期与时间组件 layDate 日期与时间组件</p>
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <div class="date-time-wrap rx-clearfix nest-wrap">
+                  <!--每个嵌套-->
+                  <div class="rx-fl">
+                    <div id="nest-chinese"></div>
+                  </div>
+                  <!--每个嵌套-->
+                  <div class="rx-fl">
+                    <div id="nest-english"></div>
+                  </div>
+                  <!--每个嵌套-->
+                  <div class="rx-fl">
+                    <div id="nest-month"></div>
+                  </div>
+                  <!--每个嵌套-->
+                  <div class="rx-fl">
+                    <div id="nest-time"></div>
+                  </div>
+                </div>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" date-time-10>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".date-time-10">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius date-time-10 css html">
+  //中文
+  laydate.render({
+    elem: '#nest-chinese'
+    ,position: 'static'
+  });
+
+  //英文
+  laydate.render({
+    elem: '#nest-english'
+    ,position: 'static'
+    ,lang: 'en'
+  });
+
+  //月份
+  laydate.render({
+    elem: '#nest-month'
+    ,type: 'month'
+    ,position: 'static'
+  });
+
+  //时间
+  laydate.render({
+    elem: '#nest-time'
+    ,type: 'time'
+    ,position: 'static'
+  });
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-10">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 <!--脚本库-->
@@ -656,6 +1093,163 @@ laydate.render({
       }
     }
   });
+
+  //控制可选的日期与时间
+
+  //限定可选日期
+  var ins22 = laydate.render({
+    elem: '#restrict-date'
+    ,min: '2016-10-14'
+    ,max: '2080-10-14'
+    ,ready: function(){
+      ins22.hint('日期可选值设定在 <br> 2016-10-14 到 2080-10-14');
+    }
+  });
+
+  //前后若干天可选，这里以7天为例
+  laydate.render({
+    elem: '#some-day'
+    ,min: -7
+    ,max: 7
+  });
+
+  //限定可选时间
+  laydate.render({
+    elem: '#restrict-time'
+    ,type: 'time'
+    ,min: '09:30:00'
+    ,max: '17:30:00'
+    ,btns: ['clear', 'confirm']
+  });
+
+  //同事绑定多个
+
+  //同时绑定多个
+  lay('.multiple-bindings').each(function(){
+    laydate.render({
+      elem: this
+      ,trigger: 'click'
+    });
+  });
+
+  //其它功能示例
+
+  //初始赋值
+  laydate.render({
+    elem: '#initial-value'
+    ,value: '1989-10-14'
+  });
+
+  //选中后的回调
+  laydate.render({
+    elem: '#on-call-back'
+    ,done: function(value, date){
+      alert('你选择的日期是：' + value + '\n获得的对象是' + JSON.stringify(date));
+    }
+  });
+
+  //日期切换的回调
+  laydate.render({
+    elem: '#date-call-back'
+    ,change: function(value, date){
+      alert('你选择的日期是：' + value + '\n\n获得的对象是' + JSON.stringify(date));
+    }
+  });
+
+  //不出现底部栏
+  laydate.render({
+    elem: '#not-bottom'
+    ,showBottom: false
+  });
+
+  //只出现确定按钮
+  laydate.render({
+    elem: '#only-affirm'
+    ,btns: ['confirm']
+  });
+
+  //自定义事件
+  laydate.render({
+    elem: '#custom-event'
+    ,trigger: 'mousedown'
+  });
+
+  //点我触发
+  laydate.render({
+    elem: '#click-trigger'
+    ,eventElem: '#click-trigger-1'
+    ,trigger: 'click'
+  });
+
+  //双击我触发
+  lay('#dblclick-trigger-1').on('dblclick', function(){
+    laydate.render({
+      elem: '#dblclick-trigger'
+      ,show: true
+      ,closeStop: '#dblclick-trigger-1'
+    });
+  });
+
+  //日期只读
+  laydate.render({
+    elem: '#date-readonly'
+    ,trigger: 'click'
+  });
+
+  //非input元素
+  laydate.render({
+    elem: '#not-input'
+  });
+
+  //其它主题
+
+  //蓝色主题
+  laydate.render({
+    elem: '#blackish-blue'
+    ,theme: 'molv'
+  });
+
+  //自定义颜色
+  laydate.render({
+    elem: '#defined-blackish'
+    ,theme: '#393D49'
+  });
+
+  //格子主题
+  laydate.render({
+    elem: '#defined-grid'
+    ,theme: 'grid'
+  });
+
+  //直接嵌套显示
+
+  //中文
+  laydate.render({
+    elem: '#nest-chinese'
+    ,position: 'static'
+  });
+
+  //英文
+  laydate.render({
+    elem: '#nest-english'
+    ,position: 'static'
+    ,lang: 'en'
+  });
+
+  //月份
+  laydate.render({
+    elem: '#nest-month'
+    ,type: 'month'
+    ,position: 'static'
+  });
+
+  //时间
+  laydate.render({
+    elem: '#nest-time'
+    ,type: 'time'
+    ,position: 'static'
+  });
+
 
 </script>
 </body>
