@@ -294,6 +294,7 @@ html #layuicss-laydate {
 
 .laydate-time-list ol {
   height: 160px;
+  padding-left: 26px !important;
   overflow: hidden
 }
 
@@ -308,7 +309,6 @@ html #layuicss-laydate {
   text-align: center;
   cursor: pointer;
   border-radius: 50%;
-  margin: 0 auto;
 }
 
 .laydate-time-list ol li:first-child {
