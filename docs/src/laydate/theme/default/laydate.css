@@ -47,8 +47,8 @@ html #layuicss-laydate {
 }
 
 .layui-laydate-content td, .layui-laydate-header *, .layui-laydate-list li {
-  transition-duration: .3s;
-  -webkit-transition-duration: .3s
+  transition-duration: .1s;
+  -webkit-transition-duration: .1s
 }
 
 @-webkit-keyframes laydate-upbit {
@@ -275,7 +275,8 @@ html #layuicss-laydate {
 
 .laydate-month-list > li {
   width: 25%;
-  margin: 17px 0
+  font-size: 11px;
+  margin: 17px 0;
 }
 
 .laydate-time-list > li {
@@ -306,6 +307,7 @@ html #layuicss-laydate {
   width: 26px;
   height: 26px;
   line-height: 26px;
+  font-size: 11px;
   text-align: center;
   cursor: pointer;
   border-radius: 50%;
@@ -370,15 +372,16 @@ html #layuicss-laydate {
 }
 
 .layui-laydate-content td {
+  font-size: 11px;
   color: #585858;
 }
 
 .layui-laydate-content td.laydate-selected {
-  background-color: #00F7DE
+  background-color: #30a8ff;
 }
 
 .laydate-selected:hover {
-  background-color: #00F7DE !important
+  background-color: #30a8ff !important
 }
 
 .layui-laydate-content td:hover, .layui-laydate-list li:hover {
@@ -443,7 +446,6 @@ html #layuicss-laydate {
 }
 
 .layui-laydate .layui-this {
-  font-size: 11px;
   color: #fff !important;
 }
 
@@ -486,7 +488,7 @@ html #layuicss-laydate {
 
 .laydate-theme-molv .layui-laydate-header {
   border: none;
-  background-color: #009688
+  background-color: #30a8ff;
 }
 
 .laydate-theme-molv .layui-laydate-header i, .laydate-theme-molv .layui-laydate-header span {
@@ -497,18 +499,12 @@ html #layuicss-laydate {
   color: #fff
 }
 
-.laydate-theme-molv .layui-laydate-content {
-  border: 1px solid #e2e2e2;
-  border-top: none;
-  border-bottom: none
-}
-
 .laydate-theme-molv .laydate-main-list-1 .layui-laydate-content {
   border-left: none
 }
 
-.laydate-theme-grid .laydate-month-list > li, .laydate-theme-grid .laydate-year-list > li, .laydate-theme-grid .layui-laydate-content td, .laydate-theme-grid .layui-laydate-content thead, .laydate-theme-molv .layui-laydate-footer {
-  border: 1px solid #e2e2e2
+.laydate-theme-grid .laydate-month-list > li, .laydate-theme-grid .laydate-year-list > li, .laydate-theme-grid .layui-laydate-content td, .laydate-theme-grid .layui-laydate-content thead {
+  border: 1px solid #e2e2e2;
 }
 
 .laydate-theme-grid .laydate-selected, .laydate-theme-grid .laydate-selected:hover {
