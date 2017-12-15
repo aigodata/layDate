@@ -325,12 +325,12 @@ html #layuicss-laydate {
 
 .layui-laydate-hint {
   position: absolute;
-  top: 115px;
+  top: 100px;
   left: 50%;
-  width: 250px;
-  margin-left: -125px;
+  width: 200px;
+  margin-left: -100px;
   line-height: 20px;
-  padding: 15px;
+  padding: 12px;
   text-align: center;
   font-size: 12px
 }
@@ -427,7 +427,7 @@ html #layuicss-laydate {
 }
 
 .layui-laydate-hint {
-  color: #FF5722
+  color: #ff5050;
 }
 
 .laydate-day-mark::after {
