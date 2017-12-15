@@ -422,6 +422,78 @@ laydate.render({
           </div>
         </div>
       </div>
+      <!--公历节日和自定义重要日子-->
+      <div class="rx-each-item">
+        <!--标题-->
+        <div class="rx-tit">
+          <h2>公历节日和自定义重要日子</h2>
+          <p>我是描述文字</p>
+        </div>
+        <!--每个条目 -- 公历节日和自定义重要日子 -->
+        <div>
+          <!--示例-->
+          <div class="rx-demo-layout">
+            <!--说明-->
+            <p class="explain">layDate 日期与时间组件 layDate 日期与时间组件</p>
+            <!--示例代码-->
+            <div class="example-wrap">
+              <div class="code-example-wrap">
+                <div class="date-time-wrap rx-clearfix">
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>开启公历节日</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="calendar-festival">
+                  </div>
+                  <!--每个时间选择器-->
+                  <div class="rx-fl">
+                    <label>自定义重要日</label>
+                    <input type="text" class="ag-date-time" placeholder="yyyy-MM-dd" id="definition-day">
+                  </div>
+                </div>
+              </div>
+              <!--代码块-->
+              <div class="rx-relative code-block" date-time-5>
+                <!--复制icon-->
+                <a href="javascript:void(0)" class="copy"
+                   data-clipboard-demo data-clipboard-action="copy"
+                   data-clipboard-target=".date-time-5">
+                  <i class="icon iconfont icon-fuzhi"></i>
+                </a>
+                <pre class="rx-border-top"><code class="rx-clear-radius date-time-5 css html">
+  //开启公历节日
+  laydate.render({
+    elem: '#calendar-festival'
+    ,calendar: true
+  });
+
+  //自定义重要日
+  laydate.render({
+    elem: '#definition-day'
+    ,mark: {
+      '0-10-14': '生日'
+      ,'0-12-31': '跨年' //每年的日期
+      ,'0-0-10': '工资' //每月某天
+      ,'0-0-15': '月中'
+      ,'2017-8-15': '' //如果为空字符，则默认显示数字+徽章
+      ,'2099-10-14': '呵呵'
+    }
+    ,done: function(value, date){
+      if(date.year === 2017 && date.month === 8 && date.date === 15){ //点击2017年8月15日，弹出提示语
+        alert('这一天是：中国人民抗日战争胜利72周年');
+      }
+    }
+  });
+                  </code></pre>
+              </div>
+              <!--按钮-->
+              <a href="javascript:void(0)" class="toggle-btn" ag-click toggle target="date-time-5">
+                <span class="show">显示代码</span>
+                <span class="hide">隐藏代码</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -557,6 +629,32 @@ laydate.render({
     ,type: 'datetime'
     ,range: '到'
     ,format: 'yyyy年M月d日H时m分s秒'
+  });
+
+  //公历节日和自定义重要日子
+
+  //开启公历节日
+  laydate.render({
+    elem: '#calendar-festival'
+    ,calendar: true
+  });
+
+  //自定义重要日
+  laydate.render({
+    elem: '#definition-day'
+    ,mark: {
+      '0-10-14': '生日'
+      ,'0-12-31': '跨年' //每年的日期
+      ,'0-0-10': '工资' //每月某天
+      ,'0-0-15': '月中'
+      ,'2017-8-15': '' //如果为空字符，则默认显示数字+徽章
+      ,'2099-10-14': '呵呵'
+    }
+    ,done: function(value, date){
+      if(date.year === 2017 && date.month === 8 && date.date === 15){ //点击2017年8月15日，弹出提示语
+        alert('这一天是：中国人民抗日战争胜利72周年');
+      }
+    }
   });
 
 </script>
