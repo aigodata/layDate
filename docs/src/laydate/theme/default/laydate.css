@@ -449,7 +449,7 @@ html #layuicss-laydate {
 }
 
 /*日期范围选择 特殊样式*/
-.layui-laydate-range .layui-laydate-content td.laydate-selected:before, .layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:before {
+.layui-laydate-range .layui-laydate-content td.laydate-selected:before, .layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:after {
   content: '';
   position: absolute;
   top: 0;
@@ -467,8 +467,13 @@ html #layuicss-laydate {
   background: none;
 }
 
-.layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:before {
+.layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:after {
   left: -14px;
+}
+
+.layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:hover:after{
+  background-color: #85cbff !important;
+  border-radius: 0 !important;
 }
 
 .layui-laydate-content td:hover, .layui-laydate-list li:hover {
@@ -511,6 +516,10 @@ html #layuicss-laydate {
   background-color: #f8f8f8 !important;
 }
 
+.laydate-selected.laydate-day-next:before{
+  background: none !important;
+}
+
 .layui-laydate-hint {
   color: #ff5050;
 }
@@ -519,7 +528,7 @@ html #layuicss-laydate {
   background-color: #30a8ff;
 }
 
-laydate-day-prev .laydate-day-mark::after, .laydate-day-next .laydate-day-mark::after {
+.laydate-day-prev .laydate-day-mark::after, .laydate-day-next .laydate-day-mark::after {
   background-color: #d8d8d8;
 }
 
