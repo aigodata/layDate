@@ -244,11 +244,11 @@ html #layuicss-laydate {
 }
 
 /*范围选择 特殊处理*/
-.layui-laydate-range .layui-laydate-main{
+.layui-laydate-range .layui-laydate-main {
   position: relative;
 }
 
-.layui-laydate-range .layui-laydate-main:after{
+.layui-laydate-range .layui-laydate-main:after {
   content: '';
   position: absolute;
   left: 12px;
@@ -258,7 +258,7 @@ html #layuicss-laydate {
   background: #ececec;
 }
 
-.layui-laydate-range .laydate-main-list-1:after{
+.layui-laydate-range .laydate-main-list-1:after {
   left: 13px;
 }
 
@@ -280,16 +280,36 @@ html #layuicss-laydate {
   margin: 3px 0;
   text-align: center;
   cursor: pointer;
+  z-index: 0;
 }
 
-.layui-laydate-list > li:hover {
-  background: #eee;
-  border-radius: 16px;
-}
-
-.layui-laydate-list > li.layui-this {
+/*.layui-laydate-list > li.layui-this {
   background: #30a8ff;
   border-radius: 16px;
+}*/
+
+/*月份样式 特殊处理*/
+.laydate-month-list > li.layui-this:after, .laydate-month-list > li:hover:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  width: 54px;
+  height: 26px;
+  border-radius: 13px;
+  z-index: -1;
+}
+
+.laydate-month-list > li:hover:after {
+  background: #eee;
+}
+
+.laydate-month-list > li.layui-this:after {
+  background: #30a8ff;
+}
+
+.laydate-month-list > li:hover {
+  background: none;
 }
 
 .laydate-month-list > li {
@@ -440,7 +460,7 @@ html #layuicss-laydate {
   right: -14px;
 }
 
-.layui-laydate-range .layui-laydate-content tr td.laydate-selected:last-child:before{
+.layui-laydate-range .layui-laydate-content tr td.laydate-selected:last-child:before {
   background: none;
 }
 
@@ -515,7 +535,7 @@ laydate-day-prev .laydate-day-mark::after, .laydate-day-next .laydate-day-mark::
 }
 
 /*范围选择 特殊处理*/
-.layui-laydate-range .layui-laydate-footer{
+.layui-laydate-range .layui-laydate-footer {
   border-top: none;
 }
 
@@ -523,7 +543,7 @@ laydate-day-prev .laydate-day-mark::after, .laydate-day-next .laydate-day-mark::
   color: #fff !important;
 }
 
-.layui-laydate .layui-this:after {
+.layui-laydate td.layui-this:after {
   content: '';
   width: 26px;
   height: 26px;
