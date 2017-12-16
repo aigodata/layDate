@@ -243,6 +243,25 @@ html #layuicss-laydate {
   vertical-align: middle;
 }
 
+/*范围选择 特殊处理*/
+.layui-laydate-range .layui-laydate-main{
+  position: relative;
+}
+
+.layui-laydate-range .layui-laydate-main:after{
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  height: 1px;
+  background: #ececec;
+}
+
+.layui-laydate-range .laydate-main-list-1:after{
+  left: 13px;
+}
+
 .layui-laydate-list {
   position: absolute;
   left: 0;
@@ -345,8 +364,14 @@ html #layuicss-laydate {
   display: none;
 }
 
-.layui-laydate-range .laydate-main-list-1 .layui-laydate-content {
-  border-left: 1px solid #e2e2e2;
+.layui-laydate-range .laydate-main-list-1 .layui-laydate-content:before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: #ececec;
 }
 
 .layui-laydate, .layui-laydate-hint {
@@ -459,6 +484,7 @@ html #layuicss-laydate {
 }
 
 .laydate-selected.laydate-day-next, .laydate-selected.laydate-day-prev {
+  color: #d2d2d2 !important;
   background-color: #f8f8f8 !important;
 }
 
@@ -486,6 +512,11 @@ laydate-day-prev .laydate-day-mark::after, .laydate-day-next .laydate-day-mark::
 
 .layui-laydate-footer span[lay-type=date] {
   color: #30a8ff;
+}
+
+/*范围选择 特殊处理*/
+.layui-laydate-range .layui-laydate-footer{
+  border-top: none;
 }
 
 .layui-laydate .layui-this {
