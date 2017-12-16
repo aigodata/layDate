@@ -90,7 +90,10 @@ html #layuicss-laydate {
   display: inline-block !important;
 }
 
-.laydate-time-show .laydate-set-ym span[lay-type=month], .laydate-time-show .laydate-set-ym span[lay-type=year], .laydate-time-show .layui-laydate-header .layui-icon, .laydate-ym-show .laydate-set-ym span[lay-type=month] {
+.laydate-time-show .laydate-set-ym span[lay-type=month],
+.laydate-time-show .laydate-set-ym span[lay-type=year],
+.laydate-time-show .layui-laydate-header .layui-icon,
+.laydate-ym-show .laydate-set-ym span[lay-type=month] {
   display: none !important;
 }
 
@@ -284,7 +287,9 @@ html #layuicss-laydate {
 }
 
 /*年份&月份样式 特殊处理*/
-.laydate-year-list > li.layui-this:after,.laydate-year-list > li:hover:after,.laydate-month-list > li.layui-this:after, .laydate-month-list > li:hover:after {
+.laydate-year-list > li.layui-this:after,
+.laydate-year-list > li:hover:after,.laydate-month-list > li.layui-this:after,
+.laydate-month-list > li:hover:after {
   content: '';
   position: absolute;
   top: 3px;
@@ -383,7 +388,10 @@ html #layuicss-laydate {
   width: 508px;
 }
 
-.layui-laydate-range .laydate-main-list-0 .laydate-next-m, .layui-laydate-range .laydate-main-list-0 .laydate-next-y, .layui-laydate-range .laydate-main-list-1 .laydate-prev-m, .layui-laydate-range .laydate-main-list-1 .laydate-prev-y {
+.layui-laydate-range .laydate-main-list-0 .laydate-next-m,
+.layui-laydate-range .laydate-main-list-0 .laydate-next-y,
+.layui-laydate-range .laydate-main-list-1 .laydate-prev-m,
+.layui-laydate-range .laydate-main-list-1 .laydate-prev-y {
   display: none;
 }
 
@@ -449,7 +457,9 @@ html #layuicss-laydate {
 }
 
 /*日期范围选择 特殊样式*/
-.layui-laydate-range .layui-laydate-content td.laydate-selected:before, .layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:after {
+.layui-laydate-range .layui-laydate-content td.laydate-selected:before,
+.layui-laydate-range .laydate-selected.laydate-day-prev + .layui-this:before,
+.layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:after{
   content: '';
   position: absolute;
   top: 0;
@@ -463,12 +473,16 @@ html #layuicss-laydate {
   right: -14px;
 }
 
-.layui-laydate-range .layui-laydate-content tr td.laydate-selected:last-child:before {
+.layui-laydate-range .layui-laydate-content tr td.laydate-selected:last-child:before{
   background: none;
 }
 
-.layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:after {
+.layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:after{
   left: -14px;
+}
+
+.layui-laydate-range .layui-laydate-content .laydate-selected.laydate-day-prev + .layui-this:before{
+  left: 0;
 }
 
 .layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:hover:after{
@@ -516,7 +530,7 @@ html #layuicss-laydate {
   background-color: #f8f8f8 !important;
 }
 
-.laydate-selected.laydate-day-next:before{
+.laydate-selected.laydate-day-prev:before,.laydate-selected.laydate-day-next:before{
   background: none !important;
 }
 
