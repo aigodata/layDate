@@ -283,28 +283,31 @@ html #layuicss-laydate {
   z-index: 0;
 }
 
-/*.layui-laydate-list > li.layui-this {
-  background: #30a8ff;
-  border-radius: 16px;
-}*/
-
-/*月份样式 特殊处理*/
-.laydate-month-list > li.layui-this:after, .laydate-month-list > li:hover:after {
+/*年份&月份样式 特殊处理*/
+.laydate-year-list > li.layui-this:after,.laydate-year-list > li:hover:after,.laydate-month-list > li.layui-this:after, .laydate-month-list > li:hover:after {
   content: '';
   position: absolute;
   top: 3px;
-  left: 2px;
-  width: 54px;
   height: 26px;
   border-radius: 13px;
   z-index: -1;
 }
 
-.laydate-month-list > li:hover:after {
+.laydate-year-list > li.layui-this:after,.laydate-year-list > li:hover:after{
+  width: 60px;
+  left: 8px;
+}
+
+.laydate-month-list > li.layui-this:after, .laydate-month-list > li:hover:after{
+  width: 54px;
+  left: 2px;
+}
+
+.laydate-year-list > li:hover:after,.laydate-month-list > li:hover:after {
   background: #eee;
 }
 
-.laydate-month-list > li.layui-this:after {
+.laydate-month-list > li.layui-this:after,.laydate-year-list > li.layui-this:after {
   background: #30a8ff;
 }
 
