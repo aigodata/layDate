@@ -460,7 +460,7 @@ html #layuicss-laydate {
 .layui-laydate-range .layui-laydate-content td.laydate-selected:before,
 .layui-laydate-range .laydate-selected.laydate-day-prev + .layui-this:before,
 .layui-laydate-range .layui-laydate-content td.layui-this + td.laydate-selected:after,
-.layui-laydate-range .layui-laydate-content td.layui-this + td.layui-this:before/*后添加*/{
+.layui-laydate-range .layui-laydate-content td.layui-this + td.layui-this:before{
   content: '';
   position: absolute;
   top: 0;
@@ -486,7 +486,7 @@ html #layuicss-laydate {
   left: 0;
 }
 
-.layui-laydate-range .layui-laydate-content td.layui-this + td.layui-this:before{/*后添加*/
+.layui-laydate-range .layui-laydate-content td.layui-this + td.layui-this:before{
   width: 28px;
   left: -14px;
 }
