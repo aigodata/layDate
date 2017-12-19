@@ -277,7 +277,7 @@ html #layuicss-laydate {
 
 .layui-laydate-list > li {
   position: relative;
-  width: 33.3%;
+  width: 33.333%;
   height: 32px;
   line-height: 32px;
   margin: 3px 0;
@@ -351,24 +351,35 @@ html #layuicss-laydate {
 }
 
 .laydate-time-list ol li {
-  width: 26px;
-  height: 26px;
-  line-height: 26px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   font-size: 11px;
   text-align: center;
   cursor: pointer;
-  border-radius: 50%;
 }
 
 .laydate-time-list ol li:first-child {
-  margin-top: 2px;
+  margin-top: 8px;
 }
 
-.laydate-time-list ol li:hover {
+.laydate-time-list ol li:hover:after,.laydate-time-list ol li.layui-this:after{
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.laydate-time-list ol li:hover:after {
   background: #eee;
 }
 
-.laydate-time-list ol li.layui-this {
+.laydate-time-list ol li.layui-this:after {
   background: #30a8ff;
 }
 
