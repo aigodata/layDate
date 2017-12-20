@@ -2,18 +2,18 @@
  *layDate页面样式
  */
 
-.ag-lay-date-page {
+.ag-layout {
   min-width: 1140px;
 }
 
-.ag-lay-date-page .rx-page-component {
+.ag-layout .rx-page-component {
   width: 1120px;
   margin: 0 auto;
   padding: 0 0 50px 0;
 }
 
 /*每个条目 标题间距*/
-.ag-lay-date-page .rx-each-item .rx-tit h2{
+.ag-layout .rx-each-item .rx-tit h2{
   margin-bottom: 20px;
 }
 
